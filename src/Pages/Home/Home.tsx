@@ -1,9 +1,10 @@
 import React from "react";
+import HelmetUtils from "../../Helpers/HelmetUtils";
 
 export default function Home() {
     return (
         <React.Fragment>
-
+            <HelmetUtils/>
             <section className="bg-home-1" id="home">
                 <div className="home-bg-overlay"></div>
                 <div className="home-center">
@@ -394,7 +395,7 @@ export default function Home() {
 
                     <div className="row footer-content">
                         <div className="col-lg-4">
-                            <img src="assets/images/logo-light.png" alt="" height="20"/>
+                            <img src="assets/logo/logo-dark.png" alt="" height="50"/>
                         </div>
 
                         <div className="col-lg-8">
@@ -437,8 +438,8 @@ export default function Home() {
                     </div>
                     <div className="row mt-5">
                         <div className="col-lg-12">
-                            <p className="footer-alt text-center text-white-50 mb-0">2019 © Devazo. Design by
-                                Themesdesign</p>
+                            <p className="footer-alt text-center text-white-50 mb-0">2019 © IIIana. Design by
+                                IIIana Studios</p>
                         </div>
                     </div>
 
