@@ -13,10 +13,9 @@ export default function Home() {
                             <div className="row vertical-content">
                                 <div className="col-lg-6">
                                     <div className="home-content">
-                                        <h3 className="home-title">We craft digital, graphic and dimensional
-                                            thinking</h3>
-                                        <p className="home-desc line-height_1_8 mt-4 text-white-50">A digital web design
-                                            studio creating modern & engaging online experiences</p>
+                                        <h3 className="home-title">Creating neo-age financial solutions just for you</h3>
+                                        {/* <p className="home-desc line-height_1_8 mt-4 text-white-50">A digital web design
+                                            studio creating modern & engaging online experiences</p> */}
                                         <div className="mt-5">
                                             <a href="" className="btn btn-white btn-round">Get Started <i
                                                 className="mdi mdi-arrow-right"></i></a>
@@ -48,9 +47,9 @@ export default function Home() {
                     <div className="row vertical-content">
                         <div className="col-lg-4">
                             <div className="mt-4">
-                                <h4 className="services-title line-height_1_4">Why choose IIIana?</h4>
-                                <p className="text-muted mt-3 line-height_1_8 f-15">Contrary to popular belief not
-                                    simply random text It has piece</p>
+                                <h4 className="services-title line-height_1_4">IIIANA STUDIOS will soon introduce you to -</h4>
+                                {/* <p className="text-muted mt-3 line-height_1_8 f-15">Contrary to popular belief not
+                                    simply random text It has piece</p> */}
                                 <div className="mt-5">
                                     <a href="" className="btn btn-custom btn-round">Know More <i
                                         className="mdi mdi-arrow-right"></i></a>
@@ -59,32 +58,93 @@ export default function Home() {
                         </div>
 
                         <div className="col-lg-4">
-                            <div className="services-box bg-white p-5 btn-round mt-4">
+                            <div className="services-box p-5 btn-round mt-4 shadow" style={{background: 'linear-gradient(to bottom, #f37335, #fdc830)'}}>
                                 <div className="services-icon">
-                                    <img src="assets/images/icon/code-window.png" className="img-fluid" alt=""/>
+                                    <img src="assets/logo/hornbill-colored.svg" className="img-fluid" alt="" style={{objectFit: 'cover', width: '100%'}}/>
                                 </div>
-                                <h5 className="mt-4 pt-2">Digital Design</h5>
-                                <p className="text-muted mt-4 mb-0">Passage you need sure there anything embarrassing
+                                <div className='d-flex flex-row justify-content-center align-content-center align-items-center'>
+                                    <h5 className="mt-4 pt-2">Payment Gateway</h5>
+                                </div>
+                                {/* <p className="text-muted mt-4 mb-0">Passage you need sure there anything embarrassing
                                     hidden all the generators is Internet repeat predefined open chunks necesary making
-                                    first Internet.</p>
+                                    first Internet.</p> */}
                             </div>
                         </div>
 
                         <div className="col-lg-4">
-                            <div className="services-box bg-white p-5 btn-round mt-4">
+                            <div className="services-box p-5 btn-round mt-4" style={{background: 'linear-gradient(to right, #5e02f5, #3e0b91)'}}>
                                 <div className="services-icon">
-                                    <img src="assets/images/icon/drawing-tablet.png" className="img-fluid" alt=""/>
+                                <img src="assets/logo/hornbill-dark-bg.svg" className="img-fluid" alt="" style={{objectFit: 'cover', width: '100%'}}/>
                                 </div>
-                                <h5 className="mt-4 pt-2">Strategy Solutions</h5>
-                                <p className="text-muted mt-4 mb-0">Vestibullum pretium conggue Morrfrbi quam commodo
+                                <div className='d-flex flex-row justify-content-center align-content-center align-items-center'>
+                                    <h5 className="mt-4 pt-2 text-white">Digital Wallet</h5>
+                                </div>
+                            
+                                {/* <p className="text-muted mt-4 mb-0">Vestibullum pretium conggue Morrfrbi quam commodo
                                     justo at viverra viverra orrci Pellentesque habitant morbi tristique senectus et
-                                    netus et malesuada.</p>
+                                    netus et malesuada.</p> */}
                             </div>
                         </div>
 
                     </div>
                 </div>
             </section>
+
+
+            <section className="section counter">
+                <div className="container">
+
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <h1 className="title-heading text-center text-white">Build your dream business application today</h1>
+                            <h3 className='title-desc text-center text-capitalize text-white-50' style={{textTransform: 'uppercase'}}>TRANSFORM YOUR BUSINESS FOR THE DIGITAL AGE</h3>
+                            <p className="title-desc text-center text-white-50 mt-4">
+                                Throw away paper forms, no more email approvals, stop chasing people, get insights and reports at your fingertip by building apps to solve your everyday operational challenges in business.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="row mt-5" id="counter">
+                        <div className="col-lg-3">
+                            <div className="counter-box text-center mt-5">
+                                <div className="counter-icon">
+                                    <i className="mdi mdi-check-circle-outline"></i>
+                                </div>
+                                <span className=" mt-3 text-white" style={{fontSize: 20, fontWeight: 600}}>Get the BEST BUSINESS SOLUTION from our solution consultant</span>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-3">
+                            <div className="counter-box text-center mt-5">
+                                <div className="counter-icon">
+                                    <i className="mdi mdi-forum-outline"></i>
+                                </div>
+                                <span className=" mt-3 text-white" style={{fontSize: 20, fontWeight: 600}}>Get the BEST CUSTOMER EXPERIENCE with our transparent CX model</span>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-3">
+                            <div className="counter-box text-center mt-5">
+                                <div className="counter-icon">
+                                    <i className="mdi mdi-star-outline"></i>
+                                </div>
+                                <span className=" mt-3 text-white" style={{fontSize: 20, fontWeight: 600}}>Get QUALITY TESTED delivery of products</span>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-3">
+                            <div className="counter-box text-center mt-5">
+                                <div className="counter-icon">
+                                    <i className="mdi mdi-heart-outline"></i>
+                                </div>
+                                <span className=" mt-3 text-white" style={{fontSize: 20, fontWeight: 600}}>We aim to add you to our HAPPY list of customers</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
 
             <section className="section" id="features">
                 <div className="container">
@@ -99,13 +159,12 @@ export default function Home() {
                             <div className="features-content mt-4">
                                 <h4 className="title-heading line-height_1_4">We help startups launch their
                                     products</h4>
-                                <p className="text-muted mt-4">Praesent gravida nunc massa euismod id interdum velit
-                                    ornare placerat orci specimen book condimentum tempus.</p>
-                                <p className="text-muted mt-4">Sellentesque placerat non felis sit amet congue sagittis
-                                    intedum arcu Nullam laoreet augue pageMaker including versions vitae blandit
-                                    dolor.</p>
+                                <p className="text-muted mt-4"> - Have an exciting business idea, but unsure about market validation?</p>
+                                <p className="text-muted mt-4"> - Have a business that you want to scale using technology, but lack the expertise?</p>
+                                <p className="text-muted mt-4"> - Technology would scale your business, but maintaining an in-house tech team is
+expensive?</p>
                                 <div className="mt-5">
-                                    <a href="" className="btn btn-custom  btn-round">Discover Now <i
+                                    <a href="" className="btn btn-custom  btn-round">Connect with us <i
                                         className="mdi mdi-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -116,68 +175,7 @@ export default function Home() {
             </section>
 
 
-            <section className="section counter">
-                <div className="container">
-
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <h1 className="title-heading text-center text-white">Build your dream website today</h1>
-                            <p className="title-desc text-center text-white-50 mt-4">Call to action pricing table is
-                                really crucial to your for your business website. Make your bids stand-out with amazing
-                                options.</p>
-                        </div>
-                    </div>
-
-                    <div className="row mt-5" id="counter">
-                        <div className="col-lg-3">
-                            <div className="counter-box text-center mt-5">
-                                <div className="counter-icon">
-                                    <i className="mdi mdi-check-circle-outline"></i>
-                                </div>
-                                <h2 className="counter-count mt-3"><span className="counter-value"
-                                                                         data-count="100">56</span>K</h2>
-                                <p className="mt-3 text-white-50 mb-0">App Download</p>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-3">
-                            <div className="counter-box text-center mt-5">
-                                <div className="counter-icon">
-                                    <i className="mdi mdi-forum-outline"></i>
-                                </div>
-                                <h2 className="counter-count mt-3"><span className="counter-value"
-                                                                         data-count="2679">1255</span></h2>
-                                <p className="mt-3 text-white-50 mb-0">Feedback</p>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-3">
-                            <div className="counter-box text-center mt-5">
-                                <div className="counter-icon">
-                                    <i className="mdi mdi-star-outline"></i>
-                                </div>
-                                <h2 className="counter-count mt-3"><span className="counter-value"
-                                                                         data-count="4.80">2.68</span>%</h2>
-                                <p className="mt-3 text-white-50 mb-0">Users Rating</p>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-3">
-                            <div className="counter-box text-center mt-5">
-                                <div className="counter-icon">
-                                    <i className="mdi mdi-heart-outline"></i>
-                                </div>
-                                <h2 className="counter-count mt-3"><span className="counter-value"
-                                                                         data-count="5000">2000</span>+</h2>
-                                <p className="mt-3 text-white-50 mb-0">Happy User</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <section className="section bg-light" id="pricing">
+            {/* <section className="section bg-light" id="pricing">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -246,9 +244,9 @@ export default function Home() {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
 
-            <section className="section bg-client" id="clients">
+            {/* <section className="section bg-client" id="clients">
                 <div className="container">
 
                     <div className="row">
@@ -325,16 +323,16 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section className="section" id="contact">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
                             <h1 className="title-heading text-center">Contact Us</h1>
-                            <p className="title-desc text-center text-muted mt-4">Tentesque habitant morbi tristique
+                            {/* <p className="title-desc text-center text-muted mt-4">Tentesque habitant morbi tristique
                                 senectus et netus malesuada fames turpis egestas quisque congue felis euismod Vestibulum
-                                ac vitae fringilla.</p>
+                                ac vitae fringilla.</p> */}
                         </div>
                     </div>
 
@@ -393,12 +391,12 @@ export default function Home() {
                 <div className="footer-bg-overlay"></div>
                 <div className="container">
 
-                    <div className="row footer-content">
-                        <div className="col-lg-4">
+                    <div className="footer-content">
+                        <div className="d-flex flex-row justify-content-center align-content-center align-items-center">
                             <img src="assets/logo/logo-dark.png" alt="" height="50"/>
                         </div>
 
-                        <div className="col-lg-8">
+                        {/* <div className="col-lg-8">
                             <div className="row">
                                 <div className="col-lg-3">
                                     <h5 className="f-18 text-white">Home</h5>
@@ -434,12 +432,12 @@ export default function Home() {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="row mt-5">
                         <div className="col-lg-12">
                             <p className="footer-alt text-center text-white-50 mb-0">2019 © IIIana. Design by
-                                IIIana Studios</p>
+                                IIIANA STUDIO</p>
                         </div>
                     </div>
 

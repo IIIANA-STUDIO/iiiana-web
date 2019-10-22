@@ -21,13 +21,10 @@ export default function Layout({children}) {
                                 <a href="#home" className="nav-link">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a href="#services" className="nav-link">services</a>
+                                <a href="#services" className="nav-link">Products</a>
                             </li>
                             <li className="nav-item">
-                                <a href="#pricing" className="nav-link">Pricing</a>
-                            </li>
-                            <li className="nav-item">
-                                <a href="#clients" className="nav-link">Clients</a>
+                                <a href="#pricing" className="nav-link">Services</a>
                             </li>
                             <li className="nav-item">
                                 <a href="#contact" className="nav-link">Contact</a>
