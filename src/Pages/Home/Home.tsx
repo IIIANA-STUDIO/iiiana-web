@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import HelmetUtils from "../../Helpers/HelmetUtils";
+import axios from 'axios'
+import * as firebase from 'firebase'
+
+const firebaseConfig = {
+    apiKey: "AIzaSyAqO3af_Drw08IO4W2ApiJC3BlkW-LE_I8",
+    authDomain: "iiiana.firebaseapp.com",
+    databaseURL: "https://iiiana.firebaseio.com",
+    projectId: "iiiana",
+    storageBucket: "iiiana.appspot.com",
+    messagingSenderId: "6943991530",
+    appId: "1:6943991530:web:67fb81d8a8ffbcca"
+  };
+
+  firebase.initializeApp(firebaseConfig)
 
 export default function Home() {
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [sub, setSub] = useState('')
+    const [message, setMessage] = useState('')
+    const [loading, setLoading] = useState(false)
+
     return (
         <React.Fragment>
             <HelmetUtils/>
@@ -17,8 +38,8 @@ export default function Home() {
                                         {/* <p className="home-desc line-height_1_8 mt-4 text-white-50">A digital web design
                                             studio creating modern & engaging online experiences</p> */}
                                         <div className="mt-5">
-                                            <a href="" className="btn btn-white btn-round">Get Started <i
-                                                className="mdi mdi-arrow-right"></i></a>
+                                            {/* <a href="" className="btn btn-white btn-round">Get Started <i
+                                                className="mdi mdi-arrow-right"></i></a> */}
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +72,7 @@ export default function Home() {
                                 {/* <p className="text-muted mt-3 line-height_1_8 f-15">Contrary to popular belief not
                                     simply random text It has piece</p> */}
                                 <div className="mt-5">
-                                    <a href="" className="btn btn-custom btn-round">Know More <i
+                                    <a href="#contact" className="btn btn-custom btn-round">Know More <i
                                         className="mdi mdi-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -91,13 +112,13 @@ export default function Home() {
             </section>
 
 
-            <section className="section counter">
+            <section className="section counter" id='pricing'>
                 <div className="container">
 
                     <div className="row">
                         <div className="col-lg-12">
                             <h1 className="title-heading text-center text-white">Build your dream business application today</h1>
-                            <h3 className='title-desc text-center text-capitalize text-white-50' style={{textTransform: 'uppercase'}}>TRANSFORM YOUR BUSINESS FOR THE DIGITAL AGE</h3>
+                            <h3 className='title-desc text-center text-capitalize text-white-50' style={{textTransform: 'uppercase'}}>transform your business for the digital age</h3>
                             <p className="title-desc text-center text-white-50 mt-4">
                                 Throw away paper forms, no more email approvals, stop chasing people, get insights and reports at your fingertip by building apps to solve your everyday operational challenges in business.
                             </p>
@@ -146,7 +167,7 @@ export default function Home() {
             </section>
 
 
-            <section className="section" id="features">
+            <section className="section">
                 <div className="container">
                     <div className="row vertical-content">
                         <div className="col-lg-6">
@@ -164,7 +185,7 @@ export default function Home() {
                                 <p className="text-muted mt-4"> - Technology would scale your business, but maintaining an in-house tech team is
 expensive?</p>
                                 <div className="mt-5">
-                                    <a href="" className="btn btn-custom  btn-round">Connect with us <i
+                                    <a href="#contact" className="btn btn-custom  btn-round">Connect with us <i
                                         className="mdi mdi-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -345,13 +366,13 @@ expensive?</p>
                                         <div className="col-lg-6">
                                             <div className="form-group mt-2">
                                                 <input name="name" id="name" className="form-control" placeholder="Name"
-                                                       type="text"/>
+                                                       type="text" value={name} onChange={event => setName(event.target.value)}/>
                                             </div>
                                         </div>
                                         <div className="col-lg-6">
                                             <div className="form-group mt-2">
                                                 <input name="email" id="email" className="form-control"
-                                                       placeholder="Email" type="email"/>
+                                                       placeholder="Email" type="email" value={email} onChange={event => setEmail(event.target.value)}/>
                                             </div>
                                         </div>
                                     </div>
@@ -359,25 +380,42 @@ expensive?</p>
                                         <div className="col-lg-12">
                                             <div className="form-group mt-2">
                                                 <input className="form-control" id="subject" placeholder="Subject"
-                                                       type="text"/>
+                                                       type="text" value={sub} onChange={event => setSub(event.target.value)}/>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="form-group mt-2">
-                                                <textarea name="comments" id="comments"
+                                                <textarea name="comments" id="comments" value={message} onChange={event => setMessage(event.target.value)}
                                                           className="form-control" placeholder="Message"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="row">
-                                        <div className="col-lg-12 mt-3 text-center">
-                                            <input id="submit" name="send"
-                                                   className="submitBnt btn btn-custom btn-round" value="Send Message"
-                                                   type="submit"/>
-                                                <div id="simple-msg"></div>
-                                        </div>
+                                        {loading && <div className="col-lg-12 mt-3 text-center">
+                                            <a href="javascript:;"
+                                                onClick={() => {
+                                                    setLoading(true)
+                                                    const sendMessage = firebase.functions().httpsCallable('senMail')
+                                                    sendMessage({name,
+                                                        email,
+                                                        subject: sub,
+                                                        message})
+                                                        .then(value => {
+                                                            console.log(value)
+                                                            setEmail('')
+                                                            setMessage('')
+                                                            setName('')
+                                                            setSub('')
+                                                            setLoading(false)
+                                                        }).catch(error => {
+                                                            console.log(error)
+                                                            setLoading(false)
+                                                        })
+                                                }}
+                                             className="btn btn-sm btn-custom btn-round">Send</a>
+                                        </div>}
                                     </div>
                                 </div>
                             </div>
@@ -394,6 +432,10 @@ expensive?</p>
                     <div className="footer-content">
                         <div className="d-flex flex-row justify-content-center align-content-center align-items-center">
                             <img src="assets/logo/logo-dark.png" alt="" height="50"/>
+                        </div>
+
+                        <div className="d-flex flex-row justify-content-center align-content-center align-items-center mt-4 text-center">
+                            <span className='text-white-50'>IIIANA STUDIO PVT. LTD, H NO – 60 + , KANGKAN NAGAR, WML J LANE, DIBRUGARH, ASSAM, INDIA, 786003</span>
                         </div>
 
                         {/* <div className="col-lg-8">
@@ -434,7 +476,7 @@ expensive?</p>
                             </div>
                         </div> */}
                     </div>
-                    <div className="row mt-5">
+                    <div className="row mt-4">
                         <div className="col-lg-12">
                             <p className="footer-alt text-center text-white-50 mb-0">2019 © IIIana. Design by
                                 IIIANA STUDIO</p>

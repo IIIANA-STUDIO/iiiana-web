@@ -6,7 +6,7 @@ export default function Layout({children}) {
 
             <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark">
                 <div className="container">
-                    <a className="navbar-brand logo text-uppercase" href="index.html">
+                    <a className="navbar-brand logo text-uppercase" href="javascript:;">
                         <img src="assets/logo/logo-dark.png" className="logo-light" alt="" height="50"/>
                             <img src="assets/logo/logo-white.png" className="logo-dark" alt="" height="50"/>
                     </a>
@@ -32,7 +32,7 @@ export default function Layout({children}) {
                         </ul>
 
                         <div className="navbar-button">
-                            <a href="" className="btn btn-sm btn-custom btn-round">Coming Soon</a>
+                            <a href="#contact" className="btn btn-sm btn-custom btn-round">Coming Soon</a>
                         </div>
                     </div>
                 </div>
