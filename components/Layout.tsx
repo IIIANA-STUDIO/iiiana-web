@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
+import ProductPopover from "./NavPopOver/Product";
+
 
 type Props = {
   children?: ReactNode
@@ -33,7 +34,8 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
                               <a href="#home" className="nav-link">Home</a>
                           </li>
                           <li className="nav-item">
-                              <a href="#services" className="nav-link">Products</a>
+                              {/*<a href="#services" className="nav-link">Products</a>*/}
+                              <ProductPopover/>
                           </li>
                           <li className="nav-item">
                               <a href="#pricing" className="nav-link">Services</a>

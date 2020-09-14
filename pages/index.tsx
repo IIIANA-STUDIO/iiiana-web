@@ -1,19 +1,7 @@
-import Link from 'next/link'
+/*import Link from 'next/link'*/
 import Layout from '../components/Layout'
 import React, {useState} from "react";
 import firebase from "firebase";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyAqO3af_Drw08IO4W2ApiJC3BlkW-LE_I8",
-    authDomain: "iiiana.firebaseapp.com",
-    databaseURL: "https://iiiana.firebaseio.com",
-    projectId: "iiiana",
-    storageBucket: "iiiana.appspot.com",
-    messagingSenderId: "6943991530",
-    appId: "1:6943991530:web:67fb81d8a8ffbcca"
-};
-
-firebase.initializeApp(firebaseConfig)
 
 export default function Home() {
 
