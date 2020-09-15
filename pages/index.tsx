@@ -1,5 +1,5 @@
 /*import Link from 'next/link'*/
-import Layout from '../components/Layout'
+import NavLayout from '../components/NavLayout'
 import React, {useState} from "react";
 import firebase from "firebase";
 
@@ -13,8 +13,8 @@ export default function Home() {
 
     return (
         <React.Fragment>
-            <Layout>
-                <section className="bg-home-1" id="home">
+            <NavLayout>
+                <section className="bg-home-1">
                     <div className="home-bg-overlay"></div>
                     <div className="home-center">
                         <div className="home-desc-center">
@@ -51,7 +51,7 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className="section bg-light" id="services">
+                <section className="section bg-light">
                     <div className="container">
                         <div className="row vertical-content">
                             <div className="col-lg-4">
@@ -100,7 +100,7 @@ export default function Home() {
                 </section>
 
 
-                <section className="section counter" id='pricing'>
+                <section className="section counter">
                     <div className="container">
 
                         <div className="row">
@@ -113,7 +113,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="row mt-5" id="counter">
+                        <div className="row mt-5">
                             <div className="col-lg-3">
                                 <div className="counter-box text-center mt-5">
                                     <div className="counter-icon">
@@ -274,44 +274,6 @@ export default function Home() {
                             <div className="d-flex flex-row justify-content-center align-content-center align-items-center mt-4 text-center">
                                 <span className='text-white-50'>IIIANA STUDIO PVT. LTD, H NO – 60 + , KANGKAN NAGAR, WML J LANE, DIBRUGARH, ASSAM, INDIA, 786003</span>
                             </div>
-
-                            {/* <div className="col-lg-8">
-                            <div className="row">
-                                <div className="col-lg-3">
-                                    <h5 className="f-18 text-white">Home</h5>
-                                    <ul className="list-unstyled footer-link mt-3">
-                                        <li><a href="">About us</a></li>
-                                        <li><a href="">Careers</a></li>
-                                        <li><a href="">Contact us</a></li>
-                                    </ul>
-                                </div>
-
-                                <div className="col-lg-3">
-                                    <h5 className="f-18 text-white">Services</h5>
-                                    <ul className="list-unstyled footer-link mt-3">
-                                        <li><a href="">Terms & Condition</a></li>
-                                        <li><a href="">Jobs</a></li>
-                                    </ul>
-                                </div>
-
-                                <div className="col-lg-3">
-                                    <h5 className="f-18 text-white">Pricing</h5>
-                                    <ul className="list-unstyled footer-link mt-3">
-                                        <li><a href="">Business</a></li>
-                                        <li><a href="">Bookmarks</a></li>
-                                        <li><a href="">Contact</a></li>
-                                    </ul>
-                                </div>
-
-                                <div className="col-lg-3">
-                                    <h5 className="f-18 text-white">Contact</h5>
-                                    <ul className="list-unstyled footer-link mt-3">
-                                        <li><a href="">123-4556-789</a></li>
-                                        <li><a href="">Your@mail.com</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> */}
                         </div>
                         <div className="row mt-4">
                             <div className="col-lg-12">
@@ -324,7 +286,7 @@ export default function Home() {
 
                 </section>
 
-            </Layout>
+            </NavLayout>
         </React.Fragment>
     )
 }
