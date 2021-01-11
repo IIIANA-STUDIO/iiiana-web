@@ -8,8 +8,17 @@
 # testing
 /coverage
 
+.idea
+/.idea
+
 # production
 /build
+
+.next
+/.next
+
+.firebase
+/.firebase
 
 # misc
 .DS_Store
