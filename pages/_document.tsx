@@ -10,7 +10,12 @@ export default class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     <meta name="theme-color" content={theme.palette.primary.main} />
-                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+                    {/*<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />*/}
+                   {/* <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />*/}
+
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet" />
+
                     <link rel="stylesheet" href="/assets/fonts.css" />
 
                     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -23,7 +28,7 @@ export default class MyDocument extends Document {
 
                     <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
                 </Head>
-                <body style={{backgroundColor: '#cfd8dc'}}>
+                <body style={{backgroundColor: '#cfd8dc', fontFamily: "Raleway"}}>
                 <Main />
                 <NextScript />
                 <script src="/assets/js/jquery.min.js"></script>

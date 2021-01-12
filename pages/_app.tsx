@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import {ThemeProvider} from "@material-ui/styles";
 import {CssBaseline} from "@material-ui/core";
 import theme from "../theme/material-ui-theme";
+import "../css/main.css"
 /*import firebase from "firebase";*/
 
 /*const firebaseConfig = {
