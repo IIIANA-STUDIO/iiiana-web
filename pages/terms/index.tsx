@@ -1,8 +1,7 @@
 import React from "react";
-import NavLayout from "../../components/NavLayout";/*
-import "./terms.modules.css"*/
+import NavLayout from "../../components/NavLayout";
 
-export default function Home() {
+export default function Terms() {
 
 
     return (
@@ -23,7 +22,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div>
-                            <p style={{margin: "50px 0 0 0"}}>Last updated on January 12th, 2021</p>
+                            <p style={{margin: "50px 0 0 0", textAlign: "center"}}>Last updated on January 12th, 2021</p>
                         </div>
                     </div>
 
