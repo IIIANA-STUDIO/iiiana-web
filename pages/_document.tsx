@@ -31,9 +31,9 @@ export default class MyDocument extends Document {
                 <NextScript />
                 <script src="/assets/js/jquery.min.js"></script>
                 <script src="/assets/js/bootstrap.bundle.min.js"></script>
-              {/*  <script src="/assets/js/jquery.easing.min.js"></script>
-                <script src="/assets/js/scrollspy.min.js"></script>*/}
-                <script src="/assets/js/counter.init.js"></script>
+                {/*<script src="/assets/js/jquery.easing.min.js"></script>
+                <script src="/assets/js/scrollspy.min.js"></script>
+                <script src="/assets/js/counter.init.js"></script>*/}
 
                 <script src="/assets/js/owl.carousel.min.js"></script>
 
